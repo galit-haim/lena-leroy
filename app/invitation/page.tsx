@@ -4,6 +4,7 @@ import Countdown from '../components/Countdown';
 import ScrollingMotifs from '../components/ScrollingMotifs';
 import DecorativeDivider from '../components/DecorativeDivider';
 import MainAudioPlayer from '../components/MainAudioPlayer';
+import RSVPForm from '../components/RSVPForm';
 import WeddingLocation from '../components/WeddingLocation';
 import { useEffect } from 'react';
 
@@ -117,7 +118,14 @@ export default function InvitationPage() {
             </h2>
             <p className="text-refined text-lg">4 septembre 2025 • Paris</p>
           </motion.div>
-
+<motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-20%" }}
+          transition={defaultTransition}
+        >
+          <RSVPForm />
+        </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
